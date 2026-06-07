@@ -255,7 +255,6 @@ This list assumes that you're already using every mod this guide recommends. Fur
 | Dashloader | Redundant with ModernFix |
 | Dimensional Threading | Compatibility issues, bugs |
 | EBE Backforged | Not compatible with ModernFix |
-| Entity Culling (by meldexun) | Redundant with Entity Culling (by tr7zw)
 | FastBoot | Redundant with ModernFix |
 | FastChest | Redundant with Enhanced Block Entities |
 | FastEvent | Negligible performance improvement, abandoned |
@@ -292,7 +291,6 @@ This list assumes that you're already using every mod this guide recommends. Fur
 | BetterFPS | Compatibility issues, negligible performance improvement |
 | Born in a Barn | Redundant, fix already present in Forge/Cleanroom |
 | Clumps | Redundant with Fixeroo |
-| Entity Culling (by meldexun) | Redundant with Entity Culling (by tr7zw)
 | FastFurnace | Redundant with Chibi |
 | FastWorkbench | Redundant with UniversalTweaks |
 | FoamFix | Redundant with VintageFix |
