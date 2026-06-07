@@ -30,11 +30,10 @@ This list assumes that you're already using every mod this guide recommends. Fur
 | Faster Random | Breaks Vanilla Parity |
 | FeyTweaks | Mostly redundant with ImmediatelyFast |
 | FPS Boost | Fake mod, doesn't provide any performance improvements |
-| GPUBooster/GPUTape/VideoTape | Doesn't actually fix VRAM leaks |
+| GPUBooster/GPUTape | Doesn't actually fix VRAM leaks |
 | KryptonFoxified | Redundant with KryptonFNP |
 | Ksyxis | Removes spawn chunks |
 | lazy-language-loader | Redundant with Language Reload |
-| MemoryLeakFix | Redundant, Mojang fixed most of the memory leaks |
 | Methane | Disables light calculations, breaks Vanilla parity, incompatible with ScalableLux |
 | Moonrise | Compatibility issues | 
 | Noisium | Negligible performance improvement |
@@ -43,7 +42,6 @@ This list assumes that you're already using every mod this guide recommends. Fur
 | Palladium | Negligible performance improvement |
 | Particle Core | Redundant with Async Particles |
 | Project-Unbound | AI-generated, no performance improvement |
-| Propane | AI-generated, no performance improvement |
 | Recipe Essentials | Mostly Redundant with FastFurnace, FastWorkbench and FastSuite |
 | Redirected | Compatibility issues, negligible performance improvement |
 | Saturn | Redundant with ModernFix, negligible performance improvement |
@@ -51,11 +49,9 @@ This list assumes that you're already using every mod this guide recommends. Fur
 | Smooth Chunk Save | Redundant with C2ME, stops saving when MSPT >50 |
 | Sodium Leaf Culling | Redundant with More Culling |
 | Structure Essentials | Redundant with BiomeSpy |
-| StutterFix | Redundant with C2ME |
 | Super Fast Math | Mostly redundant with Lithium, may actually be slower than Vanilla [[1]](https://github.com/ItzjustElias/FastMathMod/issues/12) |
 | ThreadTweak | Redundant with C2ME |
 | ThreatenGL | Fake mod, doesn't provide any performance improvements |
-| Unbinilium | AI-generated mod, causes severe performance issues |
 | Vramo | Questionable performance improvement, likely AI-generated |
 | VulkanMod | Compatibility issues |
 
