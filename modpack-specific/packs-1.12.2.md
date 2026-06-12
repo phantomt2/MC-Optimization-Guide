@@ -475,6 +475,8 @@ Since OptiFine has been replaced with Celeritas, you cannot install Nothirium or
 * **Remove:** Sound Filters, FoamFix
 * **Required Core:** OptiFine, Red Core, FermiumBooterDepoliticization
 * **Optimization Mods:** Nothirium, Naughthirium, [FastEntityRender](https://github.com/Meldexun/FastEntityRender/releases), Gnetum, VintageFix, OptiNotFine, Alfheim Lighting Engine / [patched Phosphor](#patched-phosphor)
+
+**Lighting Engine Note:** Use Alfheim Lighting Engine for singleplayer. If you play multiplayer, remove Alfheim and install a [patched version of Phosphor](#patched-phosphor) instead, as servers will check for Phosphor upon connection.
 </details>
 
 ### Installation Instructions (Cleanroom Loader)
@@ -490,7 +492,7 @@ Set up the Cleanroom Loader:
 * Configure the instance executable to use Java 21 or higher. Java 25 is recommended.
 
 #### II. Mod Replacements:
-<a id="patched-phosphor"></a>**Install patched Phosphor (required):**
+<a id="patched-phosphor"></a>**Install patched Phosphor (if you use Alfheim Lighting Engine, this can be ingored):**
 * Compile a local build of `phosphor-forge112` using the `dynamiclights` branch (https://github.com/embeddedt/phosphor-forge112).
 * Edit `build.gradle` and replace `deobfCompile ("zone.rong:mixinbooter:4.2")` with version `10.7` (or the version corresponding to your Cleanroom instance) to resolve the dependency tree.
 
