@@ -467,11 +467,10 @@ This is a client-side optimization guide. For server-side setups, it is advised 
        * Edit `build.gradle` and replace the `4.2` from `deobfCompile ("zone.rong:mixinbooter:4.2")` with version `10.7` (or the version corresponding to your Cleanroom instance) to resolve the dependency tree.
      - **Fugue:** Requires patching to function alongside FermiumASM instead of CensoredASM.
      - **RLTweaker:** Requires patching to function natively with Cleanroom.
-
 5. Remove OptiFine, Sound Filters, and FoamFix.
 6. Install the required core mods: [Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases), FermiumBooterDepoliticization, and Red Core.
 7. Install the optimization mods: Celeritas Leaf Culling, Celeritas Extra, [FastEntityRender](https://github.com/Meldexun/FastEntityRender/releases), Gnetum, VintageFix, and Alfheim Lighting Engine / [patched Phosphor](#patched-phosphor).
-   * **Lighting Engine Note:** Use Alfheim Lighting Engine for singleplayer. If you play multiplayer, remove Alfheim and install a [patched version of Phosphor](#patched-phosphor) instead, as servers will check for Phosphor upon connection.
+* **Lighting Engine Note:** Use Alfheim Lighting Engine for singleplayer. For multiplayer, remove Alfheim and use either a [patched version of Phosphor](#patched-phosphor) or the version included with the modpack (it works fine, no need to patch) , as servers check for Phosphor upon connection.
 ---
 
 ### General Performance Tweaks
