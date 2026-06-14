@@ -451,75 +451,54 @@ Known issues: None (yet?)
 
 This is a client-side optimization guide. For server-side setups, it is advised to use the default provided files without changes for the best compatibility. If there is an issue, please report it to the issues tab.
 
-Before doing anything, you need ***Cleanroom Loader*** installed in order to use the setups below. If you need to know how to download Cleanroom Loader,please scroll down.
+1. Install the latest version of RLCraft Dregora using Prism Launcher or a MultiMC-based launcher.
+2. Set up the Cleanroom Loader:
+   - Download the latest [Cleanroom Loader MMC](https://download.cleanroommc.com) instance.
+   - Extract the contents of the `Cleanroom_MMC` archive into your RLCraft Dregora instance folder, **except** `instance.cfg`.
+   - Configure the instance to use Java 21 or higher. Java 25 is recommended.
+3. Make sure you have all of these mods installed:
+   - Replace Shadowfacts' Forgelin -> Forgelin Continuous
+   - Replace LibrarianLib -> LibrarianLib Continuous
+   - Download Fugue, Scalar Legacy
+   - Update FermiumASM to version 5.31+
+   
+  4. Optional (advanced):
+     - <a name="patched-phosphor"></a>**Install patched Phosphor (if you use Alfheim Lighting Engine, this can be ignored):**
+       * Compile a local build of `phosphor-forge112` using the `dynamiclights` branch (https://github.com/embeddedt/phosphor-forge112).
+       * Edit `build.gradle` and replace `deobfCompile ("zone.rong:mixinbooter:4.2")` with version `10.7` (or the version corresponding to your Cleanroom instance) to resolve the dependency tree.
+     - **Fugue:** Requires patching to function alongside FermiumASM instead of CensoredASM.
+     - **RLTweaker:** Requires patching to function natively with Cleanroom.
 
-This guide provides 2 configurations; pick the one that suits your needs.
+5. Now you have 2 configurations to choose, pick the one that suits your needs.
 
-### 1. Maximum Performance Setup (No shaders)
-<details>
-  <summary>View Setup</summary>
+### 1. Maximum Performance Setup
+Since OptiFine has been replaced with Celeritas, you cannot install Nothirium or OptiFine alongside it, which means can't use shader.
 
-Since OptiFine has been replaced with Celeritas, you cannot install Nothirium or OptiFine alongside it.
-
-* **Remove:** OptiFine, Sound Filters, FoamFix, FermiumASM
+* **Remove:** OptiFine, Sound Filters, FoamFix
 * **Required Core:** [Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases), FermiumBooterDepoliticization, Red Core
-* **Optimization Mods:** Celeritas Leaf Culling, Celeritas Extra, [FastEntityRender](https://github.com/Meldexun/FastEntityRender/releases), Gnetum, Chibi, VintageFix, Alfheim Lighting Engine / [patched Phosphor](#patched-phosphor)
+* **Optimization Mods:** Celeritas Leaf Culling, Celeritas Extra, [FastEntityRender](https://github.com/Meldexun/FastEntityRender/releases), Gnetum, VintageFix, Alfheim Lighting Engine / [patched Phosphor](#patched-phosphor)
 
-**Lighting Engine Note:** Use Alfheim Lighting Engine for singleplayer. If you play multiplayer, remove Alfheim and install a [patched version of Phosphor](#patched-phosphor) instead, as servers will check for Phosphor upon connection.
-</details>
-
-### 2. Shader-Optimized Setup
-<details>
-  <summary>View Setup</summary>
+### 2. Shader-Optimized Setup 
+able to use shader, but gain less fps compared to the first option.
 
 * **Remove:** Sound Filters, FoamFix
 * **Required Core:** OptiFine, Red Core, FermiumBooterDepoliticization
 * **Optimization Mods:** Nothirium, Naughthirium, [FastEntityRender](https://github.com/Meldexun/FastEntityRender/releases), Gnetum, VintageFix, OptiNotFine, Alfheim Lighting Engine / [patched Phosphor](#patched-phosphor)
 
 **Lighting Engine Note:** Use Alfheim Lighting Engine for singleplayer. If you play multiplayer, remove Alfheim and install a [patched version of Phosphor](#patched-phosphor) instead, as servers will check for Phosphor upon connection.
-</details>
 
-### Installation Instructions (Cleanroom Loader)
-<details>
-  <summary>View Instructions</summary>
-
-#### I. Installing Cleanroom
-Install the latest version of RLCraft Dregora using Prism Launcher or a MultiMC-based launcher.
-
-Set up the Cleanroom Loader:
-* Download the latest [Cleanroom Loader MMC](https://download.cleanroommc.com) instance.
-* Extract the contents of the `Cleanroom_MMC` archive into your RLCraft Dregora instance folder, **except** `instance.cfg`.
-* Configure the instance executable to use Java 21 or higher. Java 25 is recommended.
-
-#### II. Mod Replacements:
-<a id="patched-phosphor"></a>**Install patched Phosphor (if you use Alfheim Lighting Engine, this can be ingored):**
-* Compile a local build of `phosphor-forge112` using the `dynamiclights` branch (https://github.com/embeddedt/phosphor-forge112).
-* Edit `build.gradle` and replace `deobfCompile ("zone.rong:mixinbooter:4.2")` with version `10.7` (or the version corresponding to your Cleanroom instance) to resolve the dependency tree.
-
-**Make sure you have all of these mods installed:**
-* Replace Shadowfacts' Forgelin -> Forgelin Continuous
-* Replace LibrarianLib -> LibrarianLib Continuous
-* Download Fugue, Scalar Legacy 
-
-**Advanced Patches (Optional)**
-* **Fugue:** Requires patching to function alongside FermiumASM instead of CensoredASM.
-* **RLTweaker:** Requires patching to function natively with Cleanroom.
-</details>
+---
 
 ### General Performance Tweaks
-<details>
-  <summary>View Tweaks</summary>
-
 If you experience heavy lag spikes in dense areas (e.g., Brutal Towers), perform the following adjustments:
 * Disable Better Foliage (`RLFoliage`).
 * Turn off all animations (If you want the nunchaku swing animation, leave terrain animation turned on).
 * Press `P` to bring up the Fancy Block Particles menu, locate the FBT icon, and click to disable it.
 * Turn off particles under the Celeritas Extra configuration (If using Setup 1).
 * Lower render distance and graphics settings.
-</details>
 
-**Known issues:**
-* The Inspirations mod requires patching to work with Celeritas. (I forgot where to patch, lol)
+Known issues:
+* Inspirations has a conflict with Celeritas and will crash when rendering Inspirations blocks. (this has been reported, hopefully it will get fixed. Or you can patch it yourself by replacing `HashMap` with `ConcurrentHashMap` in `ClientUtil.java`)
 
 </details>
 
