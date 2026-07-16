@@ -449,8 +449,6 @@ Known issues: None (yet?)
 <details>
   <summary>Click to see instructions</summary>
 
-This is a client-side optimization guide. For server-side setups, it is advised to use the default provided files without changes for the best compatibility. If there is an issue, please report it to the issues tab.
-
 1. Install the latest version of RLCraft Dregora using Prism Launcher or a MultiMC-based launcher.
 2. Set up the Cleanroom Loader:
    - Download the latest [Cleanroom Loader MMC](https://download.cleanroommc.com) instance.
@@ -470,7 +468,6 @@ This is a client-side optimization guide. For server-side setups, it is advised 
 5. Remove OptiFine, Sound Filters, and FoamFix.
 6. Install the required core mods: [Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases), FermiumBooterDepoliticization, and Red Core.
 7. Install the optimization mods: Celeritas Leaf Culling, Celeritas Extra, [FastEntityRender](https://github.com/Meldexun/FastEntityRender/releases), Gnetum, VintageFix, and Alfheim Lighting Engine / [patched Phosphor](#patched-phosphor).
-* **Lighting Engine Note:** Use Alfheim Lighting Engine for singleplayer. For multiplayer, remove Alfheim and use either a [patched version of Phosphor](#patched-phosphor) or the version included with the modpack (it works fine, no need to patch) , as servers check for Phosphor upon connection.
 ---
 
 ### General Performance Tweaks
